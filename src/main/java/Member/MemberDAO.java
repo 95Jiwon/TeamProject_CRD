@@ -26,7 +26,7 @@ public class MemberDAO {
 	
 	public void insertMember(MemberBean mbean) {
 		try {
-			String SQL = "INSERT INTO MEMBER(id,pass1,email,hobby,job,age,info) VALUE(?,?,?,?,?,?,?,?)";
+			String SQL = "INSERT INTO MEMBER(id,pass1,email,tel,hobby,job,age,info) VALUES(?,?,?,?,?,?,?,?)";
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, mbean.getId());
 			pstmt.setString(2, mbean.getPass1());
