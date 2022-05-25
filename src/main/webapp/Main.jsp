@@ -11,11 +11,11 @@ li{list-style:none}
 a{text-decoration:none;font-size:14px}
 
 .menu {
-  overflow: hidden;
   margin: 150px auto;
 }
 
 .menu > li {
+
   width: 20%; /*20*5=100%*/
   float: left;
   text-align: center;
@@ -38,13 +38,18 @@ a{text-decoration:none;font-size:14px}
 }
 
 .menu > li:hover {
+
   background-color: green;
   transition-duration: 0.5s;
 }
 
 .menu > li:hover .submenu {
+position:absolute;
   height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+  width: 20%;
   transition-duration: 1s;
+  display:block;
+  
 
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
@@ -112,57 +117,7 @@ img {vertical-align: middle;}
 </style>
 </head>
 <body>
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-	<div class="numbertext">1 / 3</div>
-		<a href="https://www.officenex.com/event/main.do?eventId=27200012620347">
-			<img src="images/event1.jpg" style="width:100%">
-		</a>
-</div>
-
-<div class="mySlides fade">
- 	<div class="numbertext">2 / 3</div>
- 		<a href="https://www.officenex.com/event/main.do?eventId=27200012626072">
-  			<img src="images/event2.jpg" style="width:100%">
-  		</a>
-</div>
-
-<div class="mySlides fade">
-	<div class="numbertext">3 / 3</div>
-  		<a href="https://www.officenex.com/event/main.do?eventId=27200012646110">
-    		<img src="images/event3.jpg" style="width:100%">
-		</a>
-</div>
-
-</div>
-
-<div style="text-align:center">
-	<span class="dot"></span> 
-  	<span class="dot"></span> 
-  	<span class="dot"></span> 
-</div>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000);
-}
-</script>
+<h1>배너자리</h1>
 <ul class="menu">
       <li>
         <a href="#">MENU1</a>
@@ -215,6 +170,55 @@ function showSlides() {
         </ul>
       </li>
     </ul>
+<div class="slideshow-container">
+
+	<div class="mySlides fade">
+			<a href="https://www.officenex.com/event/main.do?eventId=27200012620347">
+				<img src="images/event1.jpg" style="width:80%">
+			</a>
+	</div>
+	
+	<div class="mySlides fade">
+	 		<a href="https://www.officenex.com/event/main.do?eventId=27200012626072">
+	  			<img src="images/event2.jpg" style="width:80%">
+	  		</a>
+	</div>
+	
+	<div class="mySlides fade">
+	  		<a href="https://www.officenex.com/event/main.do?eventId=27200012646110">
+	    		<img src="images/event3.jpg" style="width:80%">
+			</a>
+	</div>
+	
+</div>
+
+<div style="text-align:center">
+	<span class="dot"></span> 
+  	<span class="dot"></span> 
+  	<span class="dot"></span> 
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+}
+</script>
 <h3>test</h3>
+
 </body>
 </html>
