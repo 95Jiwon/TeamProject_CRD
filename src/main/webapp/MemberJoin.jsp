@@ -13,53 +13,64 @@
 <table width = "500" border="1">
 	<tr height="50">
 		<td width="150" align="center">아이디</td>
-		<td width="350" align="center"><input type="text" name="id" size="40" placeholder="id를 넣으세요"></td>
+		<td width="350" align="center"><input type="text" name="id" size="40" placeholder="사용할 아이디를 입력해주세요."></td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center"> 패스워드</td>
-		<td width="350" align="center"><input type="password" name="pass1" size="40"></td>
+		<td width="150" align="center"> 비밀번호</td>
+		<td width="350" align="center"><input type="password" name="pass1" size="40" placeholder="비밀번호는 6자 이상으로 작성해주세요."></td>
 	</tr>
-	<tr heigh="50">
-		<td width="150" align="center">이메일</td>
-		<td width="350" align="center"><input type="email" name="email" size="40"></td>
+	<tr height="50">
+		<td width="150" align="center"> 비밀번호 확인</td>
+		<td width="350" align="center"><input type="password" name="pass2" size="40" placeholder="비밀번호를 확인해주세요."></td>
+	</tr>
+	<tr height="50">
+		<td width="150" align="center"> 고객명(필수)</td>
+		<td width="350" align="center"><input type="text" name="name" size="40" placeholder="(이름)"></td>
+	</tr>
+	<tr height="50">
+		<td width="150" align="center"> 주소(필수)</td>
+		<td width="350" align="center"><input type="text" name="address" size="40" placeholder="지번"></td><br>
+		<td width="350" align="center"><input type="text" name="address" size="40" placeholder="도로명주소"></td><br>
+		<td width="350" align="center"><input type="text" name="address" size="40" placeholder="직접입력(세부주소)"></td>
 	</tr>
 	<tr height="50">
 		<td width="150" align="center">전화번호</td>
-		<td width="350" align="center"><input type="tel" name="tel"></td>
-	</tr>
-	<tr height="50">
-		<td width="150" align="center">당신의 관심 분야</td>
 		<td width="350" align="center">
-			<input type="checkbox" name="hobby" value="캠핑">캠핑&nbsp;
-			<input type="checkbox" name="hobby" value="등산">등산&nbsp;
-			<input type="checkbox" name="hobby" value="독서">독서&nbsp;
-			<input type="checkbox" name="hobby" value="음악">음악&nbsp;
+			<select name="tel">
+			<option value="02">02</option>
+			<option value="031">031</option>
+			<option value="032">033</option>
+			<option value="041">041</option>
+			<option value="042">042</option>
+			<option value="043">043</option>
+			<option value="044">044</option>
+			<option value="051">051</option>
+			<option value="052">052</option>
+			<option value="053">053</option>
+			<option value="054">054</option>
+			<option value="055">055</option>
+			<option value="061">061</option>
+			<option value="062">062</option>
+			<option value="063">063</option>
+			<option value="064">064</option>
+			</select>-<input type="number" name="tel1" size="40">-<input type="number" name="tel1" size="40">
 		</td>
 	</tr>
 	<tr height="50">
-		<td width="150" align="center">당신의 직업은</td>
+		<td width="150" align="center"> 휴대폰번호(필수)</td>
 		<td width="350" align="center">
-			<select name="job">
-			<option value="교사">교사</option>
-			<option value="의사">의사</option>
-			<option value="변호사">변호사</option>
-			<option value="기술사">기술사</option>
-			</select>
+		<select name="phone">
+		<option value="010">010</option>
+		<option value="011">011</option>
+		<option value="016">016</option>
+		<option value="017">017</option>
+		<option value="018">019</option>
+		</select>-<input type="number" name="phone1" size="40">-<input type="number" name="phone1" size="40">
 		</td>
 	</tr>
-	<tr height="50">
-		<td width="150" align="center">당신의 연령은
-		</td>
-		<td width="350" align="center">
-		<input type="radio" name="age" value="10">10대 &nbsp;
-		<input type="radio" name="age" value="20">20대 &nbsp;
-		<input type="radio" name="age" value="30">30대 &nbsp;
-		<input type="radio" name="age" value="40">40대 &nbsp;
-		</td>
-	</tr>
-	<tr height="50">
-		<td width="150" align="center">하고 싶은말</td>
-		<td width="350" align="center"><textarea rows="5" cols="40" name="info"></textarea></td>
+	<tr heigh="50">
+		<td width="150" align="center">이메일(필수)</td>
+		<td width="350" align="center"><input type="email" name="email" size="40"></td>
 	</tr>
 	
 	<tr height="50">
