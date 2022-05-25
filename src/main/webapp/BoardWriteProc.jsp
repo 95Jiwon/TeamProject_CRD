@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="Model.BoardDAO" %>
+    <%@ page import="Member.MemberDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +13,12 @@
 
 %>
 
-<jsp:useBean id="boardbean" class="Model.BoardBean">
+<jsp:useBean id="boardbean" class="Member.MemberBean">
 <jsp:setProperty property="*" name="boardbean"/>
 </jsp:useBean>
 <%
-	BoardDAO bdao=new BoardDAO();
-	bdao.insertBoard(boardbean);
+	MemberDAO bdao=new MemberDAO();
+	bdao.insertBoard(Memberbean);
 	
 	response.sendRedirect("BoardList.jsp");
 %>
