@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="User.UserDAO" %>
-    <%@ page import="User.UserBean" %>
+    <%@ page import="Member.MemberDAO" %>
+    <%@ page import="Member.MemberBean" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,7 @@
 	String dbId = "test";
 	String dbPassword = "test1";
 
-	UserDAO udao = new UserDAO();
+	MemberDAO udao = new MemberDAO();
 	if(udao.loginAuth2Ok(id, password) == 1){ // 로그인 성공
 		session.setAttribute("id", id);
 		if(loginChk != null){
