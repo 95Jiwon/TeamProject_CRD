@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-
-
-
+<div>
     <ul>
 		<li>가격</li>
 		<li><input type="text" name="minPrice" value="" class="form-control" placeholder="최소금액" /></li>
@@ -26,6 +27,6 @@
 		<li><a class="btn_search" href="javascript:searchResult();">검색</a></li>
 		<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
 	</ul>
-
+</div>
 </body>
 </html>
