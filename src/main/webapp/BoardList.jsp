@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import ="Model.BoardDAO" %>
-    <%@ page import ="Model.BoardBean" %>
+    <%@ page import ="Member.MemberDAO" %>
+    <%@ page import ="Member.MemberBean" %>
     <%@ page import="java.util.Vector" %>
 <!DOCTYPE html>
 <html>
@@ -29,14 +29,14 @@
 	
 	int currentPage = Integer.parseInt(pageNum);
 	
-	BoardDAO bdao= new BoardDAO();
+	MemberDAO bdao= new MemberDAO();
 	
 	count = bdao.getAllCount();
 	
 	int startRow=(currentPage-1)*pageSize +1;
 	int endRow = currentPage*pageSize;
 	
-	Vector<BoardBean> vec =bdao.getAllBoard(startRow, endRow);
+	Vector<MemberBean> vec =bdao.getAllBoard(startRow, endRow);
 	
 	number = count - (currentPage-1)*pageSize;
 	
@@ -59,7 +59,7 @@
 	
 	<%
 		for(int i=0;i<vec.size();i++){
-			BoardBean bean = vec.get(i);
+			MemberBean bean = vec.get(i);
 			%>
 		<tr height="40">
 			<td width="50" align="center"><%= number--  %></td>
