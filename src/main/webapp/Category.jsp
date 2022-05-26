@@ -28,5 +28,14 @@
 		<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
 	</ul>
 </div>
+<div id="product_order_list">
+			<p>
+			<a href="javascript:recentlist();">정확도순</a>&nbsp&nbsp
+			<a href="javascript:recentlist();">인기순</a>&nbsp&nbsp
+			<a href="javascript:pricelist();">낮은가격순</a>&nbsp&nbsp
+			<a href="javascript:pricelist();">높은가격순</a>&nbsp&nbsp
+			<a href="javascript:pricelist();">제조사순</a>&nbsp&nbsp
+			<a href="javascript:pricelistdesc();">빠른배송</a> </p>
+		</div>
 </body>
 </html>
