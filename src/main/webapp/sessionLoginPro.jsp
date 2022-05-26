@@ -1,8 +1,8 @@
 <<<<<<< HEAD:sessionLoginPro.jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="user.UserDAO" %>
-    <%@ page import="user.UserBean" %>
+    <%@ page import="User.UserDAO" %>
+    <%@ page import="User.UserBean" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -93,8 +93,8 @@
 =======
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="Member.MemberDAO" %>
-    <%@ page import="Member.MemberBean" %>
+    <%@ page import="User.UserDAO" %>
+    <%@ page import="User.UserBean" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,7 +112,7 @@
 	String dbId = "test";
 	String dbPassword = "test1";
 
-	MemberDAO udao = new MemberDAO();
+	UserDAO udao = new UserDAO();
 	if(udao.loginAuth2Ok(id, password) == 1){ // 로그인 성공
 		session.setAttribute("id", id);
 		if(loginChk != null){
