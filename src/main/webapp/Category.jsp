@@ -30,12 +30,12 @@
 </div>
 <div id="product_order_list">
 			<p>
-			<a href="javascript:recentlist();">정확도순</a>&nbsp&nbsp
-			<a href="javascript:recentlist();">인기순</a>&nbsp&nbsp
-			<a href="javascript:pricelist();">낮은가격순</a>&nbsp&nbsp
-			<a href="javascript:pricelist();">높은가격순</a>&nbsp&nbsp
-			<a href="javascript:pricelist();">제조사순</a>&nbsp&nbsp
-			<a href="javascript:pricelistdesc();">빠른배송</a> </p>
+			<a href="#;">정확도순</a>&nbsp&nbsp
+			<a href="#;">인기순</a>&nbsp&nbsp
+			<a href="#;">낮은가격순</a>&nbsp&nbsp
+			<a href="#;">높은가격순</a>&nbsp&nbsp
+			<a href="#;">제조사순</a>&nbsp&nbsp
+			<a href="#;">빠른배송</a> </p>
 		</div>
 </body>
 </html>
