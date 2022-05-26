@@ -17,6 +17,9 @@
 <br>
 <br>
 <br>
-<button type="button" onclick="location.href='Main.jsp'">홈으로</button>
+<br>
+<center>
+<button type="button" style= "width:120px; height:50px;" onclick="location.href='Main.jsp'">홈으로</button>
+</center>
 </body>
 </html>
