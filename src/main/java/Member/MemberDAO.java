@@ -113,6 +113,24 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}
+	public int join(MemberBean bean) {
+		try {
+		String SQL = "INSERT INTO MEMBER VALUES(?,?,?,?,?,?,?,?)";
+		pstmt = conn.prepareStatement(SQL);
+		pstmt.setString(1, bean.getId());
+		pstmt.setString(2, bean.getPass1());
+		pstmt.setString(3, bean.getPass2());
+		pstmt.setString(4, bean.getName());
+		pstmt.setString(5, bean.getAddress());
+		pstmt.setString(6, bean.getTel());
+		pstmt.setString(7, bean.getPhone());
+		pstmt.setString(8, bean.getEmail());
+		return pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 
 //	public void deleteMember(String id) {
 //		try {
