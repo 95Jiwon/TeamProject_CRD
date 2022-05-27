@@ -15,7 +15,7 @@
 
 %>
 	
-	<jsp:useBean id="mbean" class="Member.MemberBean">
+	<jsp:useBean id="mbean" class="Member.MemberBean" scope="page">
 		<jsp:setProperty property="*" name="mbean"/>
 	</jsp:useBean>
 	
