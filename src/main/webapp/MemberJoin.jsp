@@ -89,12 +89,11 @@
 		</select></td>
 	</tr>	
 </table>
-</form>
-</center>
+
 <p>참조사항</p>
-<center>
 	<input type="submit" value="회원가입">
 	<input type="reset" value="취소">
+</form>
 </center>
 
 </body>
