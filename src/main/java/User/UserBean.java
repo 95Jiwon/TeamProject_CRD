@@ -3,13 +3,12 @@ package User;
 public class UserBean {
 	private String id;
 	private String pass1;
-	private String email;
+	private String pass2;
+	private String name;
+	private String address;
 	private String tel;
-	private String hobby;
-	private String job;
-	private String age;
-	private String info;
-	private String deleteinfo;
+	private String phone;
+	private String email;
 	public String getId() {
 		return id;
 	}
@@ -22,11 +21,23 @@ public class UserBean {
 	public void setPass1(String pass1) {
 		this.pass1 = pass1;
 	}
-	public String getEmail() {
-		return email;
+	public String getPass2() {
+		return pass2;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPass2(String pass2) {
+		this.pass2 = pass2;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getTel() {
 		return tel;
@@ -34,35 +45,18 @@ public class UserBean {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public String getHobby() {
-		return hobby;
+	public String getPhone() {
+		return phone;
 	}
-	public void setHobby(String hobby) {
-		this.hobby = hobby;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getJob() {
-		return job;
+	public String getEmail() {
+		return email;
 	}
-	public void setJob(String job) {
-		this.job = job;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getAge() {
-		return age;
-	}
-	public void setAge(String age) {
-		this.age = age;
-	}
-	public String getInfo() {
-		return info;
-	}
-	public void setInfo(String info) {
-		this.info = info;
-	}
-	public String getDeleteinfo() {
-		return deleteinfo;
-	}
-	public void setDeleteinfo(String deleteinfo) {
-		this.deleteinfo = deleteinfo;
-	}
+	
 	
 }
