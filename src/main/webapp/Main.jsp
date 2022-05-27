@@ -6,11 +6,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-h3{
-	position : relative ; 
-	top: -200px;
-	left : 1600px; 
-	margin-right: 20px;
+.login{
+	width:10%;
+	float:right;
+	margin: 10px 10px 10px 10px;
+	z-index: 2;
 }
 
 *{padding:0;margin:0}
@@ -51,14 +51,14 @@ a{text-decoration:none;font-size:14px}
 }
 
 .menu > li:hover .submenu {
-position:absolute;
+  position:absolute;
   height: 250px; /*서브메뉴 li한개의 높이 50*5*/
   width: 20%;
   transition-duration: 1s;
   display:block;
   
 
-* {box-sizing: border-box;}
+* {box-sizing: border-box; }
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
@@ -67,24 +67,6 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-.text {
-  color: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 .dot {
@@ -197,8 +179,11 @@ img {vertical-align: middle;}
 	    		<img src="images/event3.jpg" style="width:80%">
 			</a>
 	</div>
-	<h3>로그인</h3>
-	<h3>회원가입</h3>
+	<div class="login">
+		<h3>로그인</h3>
+		<h3>회원가입</h3>
+	</div>
+	
 </div>
 
 <div style="text-align:center">
