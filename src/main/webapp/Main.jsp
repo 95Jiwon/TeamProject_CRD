@@ -6,6 +6,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+h3{
+	position : relative ; 
+	top: -200px;
+	left : 1600px; 
+	margin-right: 20px;
+}
+
 *{padding:0;margin:0}
 li{list-style:none}
 a{text-decoration:none;font-size:14px}
@@ -114,6 +121,7 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
 </style>
 </head>
 <body>
@@ -189,7 +197,8 @@ img {vertical-align: middle;}
 	    		<img src="images/event3.jpg" style="width:80%">
 			</a>
 	</div>
-	
+	<h3>로그인</h3>
+	<h3>회원가입</h3>
 </div>
 
 <div style="text-align:center">
@@ -218,7 +227,6 @@ function showSlides() {
     setTimeout(showSlides, 2000);
 }
 </script>
-<h3>test</h3>
 
 </body>
 </html>
