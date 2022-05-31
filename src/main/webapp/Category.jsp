@@ -50,7 +50,7 @@ var pricelistdesc = function(url){
 			<a href="javascript:recentlist();">최신순</a>&nbsp&nbsp
 			<a href="javascript:pricelist();">낮은가격순</a>&nbsp&nbsp
 			<a href="javascript:pricelistdesc();">높은가격순</a>&nbsp&nbsp
-			
 		</div>
+		
 </body>
 </html>
