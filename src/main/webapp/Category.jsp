@@ -3,6 +3,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+var pricelistdesc = function(url){
+
+	$.ajax({
+		type: 'get',
+		url: "../PricelistDesc",
+		data: "",
+		contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+		success: function(data) {
+			$('#product_list').html(data);
+		},
+		error: function(request, status, error) {
+			alert(error);
+		}
+	});
+};
+</script>
 <style type="text/css">
 
 </style>
@@ -30,12 +47,10 @@
 </div>
 <div id="product_order_list">
 			<p>
-			<a href="#;">정확도순</a>&nbsp&nbsp
-			<a href="#;">인기순</a>&nbsp&nbsp
-			<a href="#;">낮은가격순</a>&nbsp&nbsp
-			<a href="#;">높은가격순</a>&nbsp&nbsp
-			<a href="#;">제조사순</a>&nbsp&nbsp
-			<a href="#;">빠른배송</a> </p>
+			<a href="javascript:recentlist();">최신순</a>&nbsp&nbsp
+			<a href="javascript:pricelist();">낮은가격순</a>&nbsp&nbsp
+			<a href="javascript:pricelistdesc();">높은가격순</a>&nbsp&nbsp
+			
 		</div>
 </body>
 </html>
