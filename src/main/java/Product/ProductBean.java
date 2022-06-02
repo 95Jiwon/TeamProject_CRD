@@ -1,9 +1,10 @@
 package Product;
 
 public class ProductBean {
+	private int productSerial;
 	private String productName;
 	private String productCompany;
-	private int productMoney;
+	private int productPrice;
 	
 	public String getProductName() {
 		return productName;
@@ -17,11 +18,17 @@ public class ProductBean {
 	public void setProductCompany(String productCompany) {
 		this.productCompany = productCompany;
 	}
-	public int getProductMoney() {
-		return productMoney;
+	public int getProductSerial() {
+		return productSerial;
 	}
-	public void setProductMoney(int productMoney) {
-		this.productMoney = productMoney;
+	public void setProductSerial(int productSerial) {
+		this.productSerial = productSerial;
+	}
+	public int getProductPrice() {
+		return productPrice;
+	}
+	public void setProductPrice(int productPrice) {
+		this.productPrice = productPrice;
 	}
 	
 	
