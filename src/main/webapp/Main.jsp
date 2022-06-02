@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 <style>
 .login{
-	width:10%;
-	float:right;
-	margin: 10px 10px 10px 10px;
-	z-index: 2;
+	position: absolute;
+	top:300px;
+	right:50px;
 }
 
 *{padding:0;margin:0}
@@ -75,7 +74,7 @@ img {vertical-align: middle;}
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  
   transition: background-color 0.6s ease;
 }
 
@@ -160,37 +159,39 @@ img {vertical-align: middle;}
         </ul>
       </li>
     </ul>
-<div class="slideshow-container">
+
+<div class="slideshow-container" style="width:80%">
 
 	<div class="mySlides fade">
 			<a href="https://www.officenex.com/event/main.do?eventId=27200012620347">
-				<img src="images/event1.jpg" style="width:80%">
+				<img src="images/event1.jpg" style="width:100%">
 			</a>
 	</div>
 	
-	<div class="mySlides fade">
+	<div class="mySlides fade" >
 	 		<a href="https://www.officenex.com/event/main.do?eventId=27200012626072">
-	  			<img src="images/event2.jpg" style="width:80%">
+	  			<img src="images/event2.jpg" style="width:100%">
 	  		</a>
 	</div>
 	
 	<div class="mySlides fade">
 	  		<a href="https://www.officenex.com/event/main.do?eventId=27200012646110">
-	    		<img src="images/event3.jpg" style="width:80%">
+	    		<img src="images/event3.jpg" style="width:100%">
 			</a>
 	</div>
-	<div class="login">
-		<h3>로그인</h3>
-		<h3>회원가입</h3>
+	<div class="login" >
+		<h3>test</h3>
+		<h3>test</h3>
 	</div>
 	
 </div>
-
+	
 <div style="text-align:center">
 	<span class="dot"></span> 
   	<span class="dot"></span> 
   	<span class="dot"></span> 
 </div>
+
 <script>
 var slideIndex = 0;
 showSlides();
