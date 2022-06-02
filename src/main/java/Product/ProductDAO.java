@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 
 public class ProductDAO {
 	private Connection conn;
@@ -21,7 +22,7 @@ public class ProductDAO {
 			e.printStackTrace();
 		}
 	}
-	public List<ProductVo> selectAllProducts(String description){
+	public List<ProductBean> selectAllProducts(String description){
 		//카테고리별 출력
 		String sql = "select * from product where productSerial = ? ";
 		List<ProductVo> list = new ArrayList<ProductVo>();
@@ -35,15 +36,10 @@ public class ProductDAO {
 			
 			while(rs.next()) {
 				ProductVo vo = new ProductVo();
-				vo.setProduct_serial(rs.getInt("product_serial"));
-				vo.setProduct_name(rs.getString("product_name"));
-				vo.setProduct_price(rs.getInt("product_price"));
-				vo.setProduct_picture_url(rs.getString("product_picture_url"));
-				vo.setProduct_description(rs.getString("product_description"));
-				vo.setProduct_link_url(rs.getString("product_link_url"));
-				vo.setProduct_youtubeUrl(rs.getString("product_youtubeUrl"));
-				vo.setProduct_pdInfo(rs.getString("product_pdInfo"));
-				vo.setProduct_color(rs.getString("product_color"));
+				vo.setProductSerial(rs.getInt("productSerial"));
+				vo.setProductName(rs.getString("productName"));
+				vo.setProductCompany(rs.getString("productCompany"));
+				vo.setProductPrice(rs.getInt("productPrice));
 				list.add(vo);
 				
 				
