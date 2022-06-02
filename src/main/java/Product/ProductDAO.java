@@ -22,38 +22,7 @@ public class ProductDAO {
 			e.printStackTrace();
 		}
 	}
-	public List<ProductBean> selectAllProducts(String description){
-		//카테고리별 출력
-		String sql = "select * from product where productSerial = ? ";
-		List<ProductVo> list = new ArrayList<ProductVo>();
-		
-		
-		try {
-			conn = new Application().getConn();
-			ps = conn.prepareStatement(sql);
-			ps.setString(1, serial);
-			rs = ps.executeQuery();
-			
-			while(rs.next()) {
-				ProductVo vo = new ProductVo();
-				vo.setProductSerial(rs.getInt("productSerial"));
-				vo.setProductName(rs.getString("productName"));
-				vo.setProductCompany(rs.getString("productCompany"));
-				vo.setProductPrice(rs.getInt("productPrice));
-				list.add(vo);
-				
-				
-				
-			}
-		
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			Application.close(conn, ps, rs);
-		}
-		return list;
-	}
+	
 	
 	
 	
