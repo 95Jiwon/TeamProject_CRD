@@ -6,11 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-h3{
-	position : relative ; 
-	top: -200px;
-	left : 1600px; 
-	margin-right: 20px;
+.login{
+	position: absolute;
+	top:300px;
+	right:50px;
 }
 
 *{padding:0;margin:0}
@@ -51,14 +50,14 @@ a{text-decoration:none;font-size:14px}
 }
 
 .menu > li:hover .submenu {
-position:absolute;
+  position:absolute;
   height: 250px; /*서브메뉴 li한개의 높이 50*5*/
   width: 20%;
   transition-duration: 1s;
   display:block;
   
 
-* {box-sizing: border-box;}
+* {box-sizing: border-box; }
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
@@ -69,31 +68,13 @@ img {vertical-align: middle;}
   margin: auto;
 }
 
-.text {
-  color: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 .dot {
   height: 15px;
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  
   transition: background-color 0.6s ease;
 }
 
@@ -178,34 +159,39 @@ img {vertical-align: middle;}
         </ul>
       </li>
     </ul>
-<div class="slideshow-container">
+
+<div class="slideshow-container" style="width:80%">
 
 	<div class="mySlides fade">
 			<a href="https://www.officenex.com/event/main.do?eventId=27200012620347">
-				<img src="images/event1.jpg" style="width:80%">
+				<img src="images/event1.jpg" style="width:100%">
 			</a>
 	</div>
 	
-	<div class="mySlides fade">
+	<div class="mySlides fade" >
 	 		<a href="https://www.officenex.com/event/main.do?eventId=27200012626072">
-	  			<img src="images/event2.jpg" style="width:80%">
+	  			<img src="images/event2.jpg" style="width:100%">
 	  		</a>
 	</div>
 	
 	<div class="mySlides fade">
 	  		<a href="https://www.officenex.com/event/main.do?eventId=27200012646110">
-	    		<img src="images/event3.jpg" style="width:80%">
+	    		<img src="images/event3.jpg" style="width:100%">
 			</a>
 	</div>
-	<h3>로그인</h3>
-	<h3>회원가입</h3>
+	<div class="login" >
+		<h3>test</h3>
+		<h3>test</h3>
+	</div>
+	
 </div>
-
+	
 <div style="text-align:center">
 	<span class="dot"></span> 
   	<span class="dot"></span> 
   	<span class="dot"></span> 
 </div>
+
 <script>
 var slideIndex = 0;
 showSlides();
