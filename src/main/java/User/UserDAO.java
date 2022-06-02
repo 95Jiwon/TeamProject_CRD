@@ -42,6 +42,7 @@ public class UserDAO {
 		}
 		return result;
 	}
+	
 	public int loginAuthOk(String id,String password) {
 		int result = 0;
 		getcon();
