@@ -19,7 +19,7 @@
 	});
 //-->
 </script>
-<div class="cate_search">
+<div class="#">
 				<ul>
 					<li>가격</li>
 					<li><input type="text" name="minPrice" value="" class="form-control" placeholder="최소금액"></li>
@@ -33,8 +33,8 @@
 						</select>
 					</li>
 					<li><input type="text" name="requery_src" value="" class="form-control" placeholder="결과내재검색" onkeypress="if(event.keyCode==13) {searchResult(); return false}"></li>
-					<li><a class="btn_search" href="javascript:searchResult();">검색</a></li>
-					<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
+					<li><a class="btn_search" href="#;">검색</a></li>
+					<li><a class="btn_reset" href="#;">검색초기화</a></li>
 				</ul>
 			</div>
 <table id="gcTable" class="tablesorter">
@@ -42,40 +42,49 @@
 	<tr>
 		<th>물품명</th>
 		<th>가격</th>
+		<th>이미지</th>
 	</tr>
 	</thead>
 	<tbody>
     <tr>
         <td>연필깍이</td>
         <td>10000</td>
+        <td><img width="100px" height="100px" src="images/pensil.jpg"></td>
     </tr>
     <tr>
-        <td>A4복사용지2000매</td>
+        <td>A4복사용지2500매</td>
         <td>15000</td>
+        <td><img width="100px" height="100px" src="images/A4.jpg"></td>
     </tr>
     <tr>
         <td>포스트잇</td>
         <td>1700</td>
+        <td><img width="100px" height="100px" src="images/postit.jpg"></td>
     </tr>
     <tr>
         <td>수정테이프</td>
         <td>1880</td>
+        <td><img width="100px" height="100px" src="images/tape.jpg"></td>
     </tr>
     <tr>
         <td>스테플러</td>
         <td>4500</td>
+        <td><img width="100px" height="100px" src="images/stemp.jpg"></td>
     </tr>
     <tr>
         <td>커터</td>
         <td>1800</td>
+        <td><img width="100px" height="100px" src="images/cutter.jpg"></td>
     </tr>
     <tr>
         <td>2공펀치</td>
         <td>9500</td>
+        <td><img width="100px" height="100px" src="images/punchi.jpg"></td>
     </tr>
     <tr>
         <td>골무</td>
         <td>2300</td>
+        <td><img width="100px" height="100px" src="images/golmu.jpg"></td>
     </tr>
 	</tbody>
 </table>
