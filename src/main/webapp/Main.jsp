@@ -12,6 +12,12 @@
 	top:300px;
 	right:50px;
 }
+.new{
+	position: absolute;
+	z-index:1;
+	top:400px;
+	right:50px;
+}
 
 *{padding:0;margin:0}
 li{list-style:none}
@@ -181,9 +187,10 @@ img {vertical-align: middle;}
 	    		<img src="images/event3.jpg" style="width:100%">
 			</a>
 	</div>
-	<div class="login" >
-		<input type="button" value="로그인">
-		<br>
+	<div class="login">
+		<button type="submit" id="식별자">로그인</button>
+	</div>
+	<div class="new">
 		<h3>회원가입</h3>
 	</div>
 	
