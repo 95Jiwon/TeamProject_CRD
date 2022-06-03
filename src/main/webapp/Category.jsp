@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
+
 <div>
     <ul>
 		<li>가격</li>
@@ -44,7 +44,7 @@
 			<a href="javascript:pricelistdesc();">높은가격순</a>&nbsp&nbsp
 
 		</div>
-=======
+
 <script type="text/javascript">
 <!--
 	$(document).ready(function(){ 
@@ -122,6 +122,6 @@
 	</tbody>
 </table>
 
->>>>>>> 43eadcc44a50420b4e1cef799826a7ee054e248d
+
 </body>
 </html>
