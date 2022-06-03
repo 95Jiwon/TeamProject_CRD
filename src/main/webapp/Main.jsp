@@ -8,6 +8,7 @@
 <style>
 .login{
 	position: absolute;
+	z-index:1;
 	top:300px;
 	right:50px;
 }
@@ -51,6 +52,7 @@ a{text-decoration:none;font-size:14px}
 
 .menu > li:hover .submenu {
   position:absolute;
+  z-index:50;
   height: 250px; /*서브메뉴 li한개의 높이 50*5*/
   width: 20%;
   transition-duration: 1s;
@@ -180,8 +182,9 @@ img {vertical-align: middle;}
 			</a>
 	</div>
 	<div class="login" >
-		<h3>test</h3>
-		<h3>test</h3>
+		<input type="button" value="로그인">
+		<br>
+		<h3>회원가입</h3>
 	</div>
 	
 </div>
