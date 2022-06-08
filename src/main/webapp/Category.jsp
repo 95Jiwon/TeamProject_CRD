@@ -13,6 +13,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+.cate_search {padding: 7px 15px; border: 1px solid #ddd; border-top: 0;}
+.cate_search li {display: inline-block; vertical-align: middle; padding: 0 3px; font-size: 12px;}
+.cate_search .form-control {height: 25px; display: inline-block; vertical-align: middle; padding: 1px 7px 3px; max-width: 170px; font-size: 12px;}
+.cate_search .btn_gray_dark {height: 25px; display: inline-block; vertical-align: middle; padding: 4px 15px;}
+
+.cate_search_modal {padding: 7px 15px; border: 1px solid #ddd; border-top: 1;}
+.cate_search_modal li {display: inline-block; vertical-align: middle; padding: 0 3px; font-size: 12px;}
+.cate_search_modal .form-control {height: 25px; display: inline-block; vertical-align: middle; padding: 1px 7px 3px; max-width: 170px; font-size: 12px;}
+.cate_search_modal .btn_gray_dark {height: 25px; display: inline-block; vertical-align: middle; padding: 4px 15px;}
 *{padding:0;margin:0}
 li{list-style:none}
 a{text-decoration:none;font-size:14px}
@@ -160,23 +169,24 @@ img {vertical-align: middle;}
         </ul>
       </li>
     </ul>
-    <ul>
-		<li>가격</li>
-		<li><input type="text" name="minPrice" value="" class="form-control" placeholder="최소금액" /></li>
-		<li>~</li>
-		<li><input type="text" name="maxPrice" value="" class="form-control" placeholder="최대금액" /></li>
-		<li class="pl30">결과 내 재검색</li>
-		<li>
-			<select name="smethod" class="form-control">
-				<option value="" selected>포함단어</option>
-				<option value="exception">제외단어</option>
-			</select>
-		</li>
-		<li><input type="text" name="requery_src" value="" class="form-control" placeholder="결과내재검색" onkeypress="if(event.keyCode==13) {searchResult(); return false}"/></li>
-		<li><a class="btn_search" href="javascript:searchResult();">검색</a></li>
-		<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
-	</ul>
-</div>
+   <div class="cate_search">
+				<ul>
+					<li>가격</li>
+					<li><input type="text" name="minPrice" value="" class="form-control" placeholder="최소금액" /></li>
+					<li>~</li>
+					<li><input type="text" name="maxPrice" value="" class="form-control" placeholder="최대금액" /></li>
+					<li class="pl30">결과 내 재검색</li>
+					<li>
+						<select name="smethod" class="form-control">
+							<option value="" selected>포함단어</option>
+							<option value="exception">제외단어</option>
+						</select>
+					</li>
+					<li><input type="text" name="requery_src" value="" class="form-control" placeholder="결과내재검색" onkeypress="if(event.keyCode==13) {searchResult(); return false}"/></li>
+					<li><a class="btn_search" href="javascript:searchResult();">검색</a></li>
+					<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
+				</ul>
+			</div>
 
 <script type="text/javascript">
 <!--
