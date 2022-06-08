@@ -3,171 +3,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style>
-.login{
-	position: absolute;
-	z-index:1;
-	
-}
-.new{
-	position: absolute;
-	z-index:1;
-	top:400px;
-	right:50px;
+<style type="text/css">
+* {
+    box-sizing: border-box;
 }
 
-*{padding:0;margin:0}
-li{list-style:none}
-a{text-decoration:none;font-size:14px}
-
-.menu {
-  margin: 150px auto;
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
 }
-
-.menu > li {
-
-  width: 20%; /*20*5=100%*/
-  float: left;
-  text-align: center;
-  line-height: 40px;
-  background-color: Skyblue;
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
 }
-
-.menu a {
-  color: #fff;
+.header h1 {
+    font-size: 50px;
 }
-
-.submenu > li {
-  line-height: 50px;
-  background-color: lightgreen;
+/* Style the top navigation bar */
+.topnav {
+    
+    background-color: black;
 }
+/* Style the topnav links */
 
-.submenu {
-  height: 0; /*ul의 높이를 안보이게 처리*/
-  overflow: hidden;
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
 }
-
-.menu > li:hover {
-
-  background-color: green;
-  transition-duration: 0.5s;
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
 }
-
-.menu > li:hover .submenu {
-  position:absolute;
-  z-index:50;
-  height: 250px; /*서브메뉴 li한개의 높이 50*5*/
-  width: 20%;
-  transition-duration: 1s;
-  display:block;
-  
-
-* {box-sizing: border-box; }
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
 }
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  
-  transition: background-color 0.6s ease;
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
-
-.active {
-  background-color: #717171;
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
 }
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
 }
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px 150px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
-
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
-
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    max-width: 400px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 160px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: yellow;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: skyblue;
+}
 </style>
 </head>
 <body>
-<h1>배너자리</h1>
-<ul class="menu">
-      <li>
-        <a href="#">MENU1</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU2</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU3</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU4</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU5</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-    </ul>
+ 
+<div class="header">
+  <h1>배너위치</h1>
+</div>
+ 
+<div class="topnav">
+  <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link111</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link1111</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link1111</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+</div>
 
-<div class="slideshow-container" style="width:80%">
+<div class="row">
+  <div class="leftcolumn">
+    <div class="slideshow-container" style="width:100%">
 
 	<div class="mySlides fade">
 			<a href="https://www.officenex.com/event/main.do?eventId=27200012620347">
@@ -186,13 +166,10 @@ img {vertical-align: middle;}
 	    		<img src="images/event3.jpg" style="width:100%">
 			</a>
 	</div>
-	<div class="login">
-		<button type="submit" id="식별자">로그인</button>
-	</div>
 	
 	
 </div>
-	
+
 <div style="text-align:center">
 	<span class="dot"></span> 
   	<span class="dot"></span> 
@@ -220,6 +197,32 @@ function showSlides() {
     setTimeout(showSlides, 2000);
 }
 </script>
-
+<div class="card">
+      
+      <div class="fakeimg" style="height:200px;">Image</div>
+      
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <div class="fakeimg" style="height:100px; text-align: center;"><h1>로그인</h1></div>     
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+ 
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+ 
 </body>
 </html>
