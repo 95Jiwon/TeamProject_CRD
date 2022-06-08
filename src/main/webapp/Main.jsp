@@ -9,8 +9,7 @@
 .login{
 	position: absolute;
 	z-index:1;
-	top:300px;
-	right:50px;
+	
 }
 .new{
 	position: absolute;
@@ -190,9 +189,7 @@ img {vertical-align: middle;}
 	<div class="login">
 		<button type="submit" id="식별자">로그인</button>
 	</div>
-	<div class="new">
-		<h3>회원가입</h3>
-	</div>
+	
 	
 </div>
 	
