@@ -196,8 +196,8 @@
                         <li>상품 <i class="arrow fas fa-angle-right"></i></li>
                         <ul class="small_menu">
                             <li><a href="itemUpload.jsp">상품등록</a></li>
-                            <li><a href="itemUpdate">상품수정</a></li>
-                            <li><a href="itemDelete">상품삭제</a></li>
+                            <li><a href="itemUpdate.jsp">상품수정</a></li>
+                            <li><a href="itemDelete.jsp">상품삭제</a></li>
                         </ul>
                     </ul>
                     <ul class="big_menu">
