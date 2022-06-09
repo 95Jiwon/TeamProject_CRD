@@ -169,8 +169,6 @@ img {vertical-align: middle;}
         </ul>
       </li>
     </ul>
-    <br>
-    <br>
    <div class="cate_search">
 				<ul>
 					<li>가격</li>
