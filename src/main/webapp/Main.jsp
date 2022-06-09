@@ -48,6 +48,11 @@ body {
     width: 100%;
     padding: 20px;
 }
+.fakeimg2 {
+    
+    width: 100%;
+    
+}
 /* Add a card effect for articles */
 .card {
     background-color: white;
@@ -79,7 +84,8 @@ body {
 .dropbtn {
     background-color: black;
     color: white;
-    padding: 16px 150px;
+    padding: 16px 15px;
+    width: 200px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -97,7 +103,8 @@ body {
 }
 .dropdown-content a {
     color: white;
-    padding: 12px 160px;
+    padding: 12px 16px;
+    width: 200px;
     text-decoration: none;
     display: block;
 }
@@ -120,15 +127,15 @@ body {
  
 <div class="topnav">
   <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
+      <button class="dropbtn">필기구</button>
       <div class="dropdown-content">
-        <a href="#">Link111</a>
+        <a href="#">Link1111</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
+      <button class="dropbtn">도서</button>
       <div class="dropdown-content">
         <a href="#">Link1111</a>
         <a href="#">Link 2</a>
@@ -205,7 +212,7 @@ function showSlides() {
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <div class="fakeimg" style="height:100px; text-align: center;"><h1>로그인</h1></div>     
+      <img class="fakeimg2" src="images/로그인.png" style="height:200px; text-align: center;">
     </div>
     <div class="card">
       <h3>Popular Post</h3>
