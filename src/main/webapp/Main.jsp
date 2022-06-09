@@ -129,7 +129,7 @@ body {
   <div class="dropdown">
       <button class="dropbtn">필기구</button>
       <div class="dropdown-content">
-        <a href="#">Link1111</a>
+        <a href="#">Link 1</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
@@ -137,7 +137,7 @@ body {
     <div class="dropdown">
       <button class="dropbtn">도서</button>
       <div class="dropdown-content">
-        <a href="#">Link1111</a>
+        <a href="#">Link1</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
