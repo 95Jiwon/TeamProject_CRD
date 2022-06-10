@@ -73,13 +73,6 @@
 .cate_search_modal li {display: inline-block; vertical-align: middle; padding: 0 3px; font-size: 12px;}
 .cate_search_modal .form-control {height: 25px; display: inline-block; vertical-align: middle; padding: 1px 7px 3px; max-width: 170px; font-size: 12px;}
 .cate_search_modal .btn_gray_dark {height: 25px; display: inline-block; vertical-align: middle; padding: 4px 15px;}
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-        width: 100%;
-        padding: 0;
-    }
-}
-
 
 </style>
 </head>
