@@ -78,7 +78,7 @@
 </head>
 <body>
 <div class="header">
-  <h1>배너위치</h1>
+  <img alt="배너" src="images/푸.jfif" width="150px" height="150px">
 </div>
 <div class="topnav">
   <div class="dropdown">
