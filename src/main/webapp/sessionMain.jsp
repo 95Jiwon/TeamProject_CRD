@@ -25,7 +25,8 @@
 
 <h2>고객페이지</h2>
 <b><%=id %>님이 로그인 했습니다.</b><br>
-<input type="button" value="로그아웃" onclick="location.href='sessionLogout.jsp'">
+<input type="button" value="로그아웃" onclick="location.href='sessionLogout.jsp'"><br>
+<input type="button" value="홈으로" onclick="location.href='Main.jsp'">
 
 </body>
 </html>

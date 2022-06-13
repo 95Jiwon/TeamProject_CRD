@@ -20,7 +20,7 @@
 %>
 수정되었습니다.
 <%
-	response.sendRedirect("MemberList.jsp");
+	response.sendRedirect("sessionMain.jsp");
 %>
 </body>
 </html>

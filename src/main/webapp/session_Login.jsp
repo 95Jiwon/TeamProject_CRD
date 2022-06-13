@@ -25,6 +25,7 @@
 패스워드:<input type="password" name="password"><br>
 <input type="checkbox" name="loginChk" value="true">로그인 상태유지<br>
 <input type="submit" value="로그인">
+<input type="button" value="회원가입" onclick="location.href='MemberJoin.jsp';">
 </center>
 </form>
 </body>
