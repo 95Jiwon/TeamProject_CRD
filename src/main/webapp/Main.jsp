@@ -107,8 +107,11 @@ body {
 </head>
 <body>
  
+
 <div class="header">
-	<h1>배너위치</h1>
+	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
+  	<img src="images/푸.png" width="150" align="center">
+	</a>
 </div>
  
 <div class="topnav">
