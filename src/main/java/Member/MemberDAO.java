@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import java.sql.ResultSet;
-
 import java.util.Vector;
 
 public class MemberDAO {
@@ -131,7 +130,32 @@ public class MemberDAO {
 		}
 		return -1;
 	}
+	public boolean checkId(String id) {
+		boolean check = false;
+		try {
+			
+			String sql = "SELECT id FROM MEMBER WHERE id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			check = rs.next();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(pstmt != null) { pstmt.close(); }
+				if(rs != null) { rs.close(); }
+				if(conn != null) { conn.close(); }
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	
+		return check;
 
+	}
 //	public void deleteMember(String id) {
 //		try {
 //			//String SQL = "DELETE FROM MEMBER WHERE id=?";

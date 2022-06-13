@@ -13,6 +13,57 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+* {
+    box-sizing: border-box;
+}
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+.header h1 {
+    font-size: 50px;
+}
+.topnav {
+    
+    background-color: black;
+}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px 15px;
+    width: 200px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    max-width: 400px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    width: 200px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: yellow;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: skyblue;
+}
 .cate_search {padding: 7px 15px; border: 1px solid #ddd; border-top: 0;}
 .cate_search li {display: inline-block; vertical-align: middle; padding: 0 3px; font-size: 12px;}
 .cate_search .form-control {height: 25px; display: inline-block; vertical-align: middle; padding: 1px 7px 3px; max-width: 170px; font-size: 12px;}
@@ -22,153 +73,55 @@
 .cate_search_modal li {display: inline-block; vertical-align: middle; padding: 0 3px; font-size: 12px;}
 .cate_search_modal .form-control {height: 25px; display: inline-block; vertical-align: middle; padding: 1px 7px 3px; max-width: 170px; font-size: 12px;}
 .cate_search_modal .btn_gray_dark {height: 25px; display: inline-block; vertical-align: middle; padding: 4px 15px;}
-*{padding:0;margin:0}
-li{list-style:none}
-a{text-decoration:none;font-size:14px}
 
-.menu {
-  margin: 150px auto;
-}
-
-.menu > li {
-
-  width: 20%; /*20*5=100%*/
-  float: left;
-  text-align: center;
-  line-height: 40px;
-  background-color: Skyblue;
-}
-
-.menu a {
-  color: #fff;
-}
-
-.submenu > li {
-  line-height: 50px;
-  background-color: lightgreen;
-}
-
-.submenu {
-  height: 0; /*ul의 높이를 안보이게 처리*/
-  overflow: hidden;
-}
-
-.menu > li:hover {
-
-  background-color: green;
-  transition-duration: 0.5s;
-}
-
-.menu > li:hover .submenu {
-  position:absolute;
-  z-index:50;
-  height: 250px; /*서브메뉴 li한개의 높이 50*5*/
-  width: 20%;
-  transition-duration: 1s;
-  display:block;
-  
-
-* {box-sizing: border-box; }
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
 </style>
 </head>
 <body>
-
-<ul class="menu">
-      <li>
-        <a href="#">MENU1</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU2</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU3</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU4</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">MENU5</a>
-        <ul class="submenu">
-          <li><a href="#">submenu01</a></li>
-          <li><a href="#">submenu02</a></li>
-          <li><a href="#">submenu03</a></li>
-          <li><a href="#">submenu04</a></li>
-          <li><a href="#">submenu05</a></li>
-        </ul>
-      </li>
-    </ul>
+<div class="header">
+  <img alt="배너" src="images/푸.png" width="150px" height="150px">
+</div>
+<div class="topnav">
+  <div class="dropdown">
+      <button class="dropbtn">필기구</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">도서</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">악세사리</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+        <div class="dropdown">
+      <button class="dropbtn">기타</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+        <div class="dropdown">
+      <button class="dropbtn">기타</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+</div>
    <div class="cate_search">
 				<ul>
 					<li>가격</li>
@@ -183,8 +136,8 @@ img {vertical-align: middle;}
 						</select>
 					</li>
 					<li><input type="text" name="requery_src" value="" class="form-control" placeholder="결과내재검색" onkeypress="if(event.keyCode==13) {searchResult(); return false}"/></li>
-					<li><a class="btn_search" href="javascript:searchResult();">검색</a></li>
-					<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
+					<li><a class="btn_search" href="#">검색</a></li>
+					<li><a class="btn_reset" href="#">검색초기화</a></li>
 				</ul>
 			</div>
 

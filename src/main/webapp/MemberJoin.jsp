@@ -14,28 +14,95 @@
 <table width = "1000" border="1">
 	<tr height="50">
 		<td width="200" align="center">아이디</td>
-		<td width="350" align="left"><input type="text" name="id" size="30" placeholder="사용할 아이디를 입력해주세요.">
-		<input type="button" value="중복확인"></td>
+		<td width="350" align="left">
+		<input type = "hidden" id = "idchk" value = "">
+		<input type="text" name="id" size="30" placeholder="사용할 아이디를 입력해주세요.">
+		<button type = "button" class = "idCheckbutton" onClick = "idCheck(this.form.id.value)">중복 체크</button></td>
 	</tr>
+	<script>
+function idCheck(id){
+	 if(id==""){
+		 $('#submit').css('background','red');
+		 $('#submit').attr('disabled', true);
+		 alert("아이디를 먼저 입력하세요");
+		 document.regForm.id.focus()
+	 }
+	 else if(id.length < 4 || id.length > 10){
+		 $('#submit').css('background','red');
+		 $('#submit').attr('disabled', true);
+		 alert("아이디는 4~10자로 입력해야 합니다.");
+		 document.regForm.id.focus()
+	 }
+	 else if(id){
+		 var url = "idCheck.jsp?id=" + id;
+		 window.open(url,"idCheck","width=300, height=100");
+		if($('#idchk').val()=="No"){
+					$('#submit').css('background','red');
+				    $('#submit').attr('disabled', true);
+					 alert("사용중인");
+				 }
+		else if($('#idchk').val()=="Yes"){
+					$('#submit').css('background','#98ff98');
+				    $('#submit').attr('disabled', false);
+					 alert("사용가능한");
+				 }
+	 }
+ }
+</script>
 	<tr height="50">
 		<td width="200" align="center"> 비밀번호</td>
-		<td width="350" align="left"><input type="password" name="pass1" size="40" placeholder="비밀번호는 6자 이상으로 작성해주세요."></td>
+		<td width="350" align="left">
+		<input type="password" name="pass1" id="pass1" size="30" onchange="check_pw()"></td>
 	</tr>
   	<tr height="50">
 		<td width="200" align="center"> 비밀번호 확인</td>
-		<td width="350" align="left"><input type="password" name="pass2" size="40" placeholder="비밀번호를 확인해주세요."></td>
+		<td width="350" align="left">
+		<input type="password" name="pass2" id="pass2" size="30" onchange="check_pw()">&nbsp;<span id="check"></span></td>
 	</tr>
+	 <script>
+        function check_pw(){
+ 
+            var pass1 = document.getElementById('pass1').value;
+            var SC = ["!","@","#","$","%"];
+            var check_SC = 0;
+ 
+            if(pass1.length < 6 || pass1.length>16){
+                window.alert('비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.');
+                document.getElementById('pass1').value='';
+            }
+            for(var i=0;i<SC.length;i++){
+                if(pass1.indexOf(SC[i]) != -1){
+                    check_SC = 1;
+                }
+            }
+            if(check_SC == 0){
+                window.alert('!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.')
+                document.getElementById('pass1').value='';
+            }
+            if(document.getElementById('pass1').value !='' && document.getElementById('pass2').value!=''){
+                if(document.getElementById('pass1').value==document.getElementById('pass2').value){
+                    document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
+                    document.getElementById('check').style.color='blue';
+                }
+                else{
+                    document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
+                    document.getElementById('check').style.color='red';
+                }
+            }
+        }
+    </script>
 	</table>
 
 <h3>개인정보</h3>
-<table width = "1000" border="2">
+<table width = "1000" border="1">
   	<tr height="50">
 		<td width="200" align="center"> 고객명(필수)</td>
 		<td width="350" align="left"><input type="text" name="name" size="40" placeholder="(이름)"></td>
 	</tr>
 	 <tr height="200">
 		<td width="200" align="center"> 주소(필수)</td>
-		<td width="100" align="left"><input type="text" name="address" id="sample6_postcode" size="10" placeholder="우편번호">
+		<td width="100" align="left">
+		<input type="text" name="address" id="sample6_postcode" size="10" placeholder="우편번호">
 		<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호찾기">
 		 <p><input type="text" name="address" id="sample6_address" size="40" placeholder="도로명주소"></p>
 		 <p><input type="text" name="address" id="sample6_detailAddress" size="40" placeholder="직접입력(세부주소)">
@@ -129,7 +196,7 @@
 	<tr height="50">
 		<td width="150" align="center">이메일(필수)</td>
 		<td width="350" align="left">
-		<input type="text" name="str_email01" id="str_email01" style="width:100px"> @
+		<input type="text" name="email" id="email" style="width:100px"> @
 <input type="text" name="str_email02" id="str_email02" style="width:100px;" disabled value="naver.com">
 <select style="width:100px;margin-right:10px" name="selectEmail" id="selectEmail">
 	 <option value="1">직접입력</option>
