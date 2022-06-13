@@ -4,6 +4,10 @@
 <html>
 <head>
 <style type="text/css">
+<%
+request.setCharacterEncoding("utf-8"); //한글 깨짐 방지
+String id =(String) session.getAttribute("id");
+%> 
 * {
     box-sizing: border-box;
 }
@@ -210,7 +214,24 @@ body {
 	</div>
 	<div class="rightcolumn">
 		<div class="card">
-			<img class="fakeimg2" src="images/로그인.png" style="height:200px; text-align: center;">
+			
+			<form name='frm_login' id='frm_login' method='post'>
+		<!-- 공통 -->
+		<input type='hidden' name='loginFlag' value='' />
+		
+		<%if(id == null) {%>	
+			<a href="session_Login.jsp">
+				<img class="fakeimg2" src="images/로그인.png" style="height:200px; text-align: center;">
+			</a>
+			
+			<%}else{ %>	
+			<!-- 로그인 이후 화면 -->
+			<span><%=(id == null)? "손님" : id %> 방가...방가...</span>
+			<a href="sessionLogout.jsp">
+				<input type='button' value='로그아웃' id='btnLogout'/>
+			</a>
+		<%} %>
+	</form>
 		</div>
 		<div class="card">
 			<h3>Popular Post</h3>

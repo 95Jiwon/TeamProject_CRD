@@ -1,4 +1,3 @@
-<<<<<<< HEAD:sessionLoginPro.jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="User.UserDAO" %>
@@ -28,9 +27,9 @@
 			cookie.setMaxAge(24*60*60);
 			cookie.setPath("/");
 			response.addCookie(cookie);
-			response.sendRedirect("sessionMain.jsp");
+			response.sendRedirect("Main.jsp");
 		}else {
-			response.sendRedirect("sessionMain.jsp");
+			response.sendRedirect("Main.jsp");
 		}
 	}else {
 		out.println("로그인 실패");
@@ -90,6 +89,4 @@
 	*/
 %>
 </body>
-</html>
->>>>>>> 91a0672b5ed7c850fb8e9735285d61aef2782f4a:src/main/webapp/sessionLoginPro.jsp
 </html>
