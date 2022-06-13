@@ -12,7 +12,7 @@
 	if(cookies != null){
 		for(Cookie tempCookie : cookies){
 			if(tempCookie.getName().equals("id")){
-				response.sendRedirect("sessionMain.jsp");
+				response.sendRedirect("Main.jsp");
 			}
 		}
 	}

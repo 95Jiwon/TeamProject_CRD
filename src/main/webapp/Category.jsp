@@ -78,7 +78,9 @@
 </head>
 <body>
 <div class="header">
-  <img alt="배너" src="images/푸.png" width="150px" height="150px">
+	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
+  	<img src="images/푸.png" width="150" align="center">
+	</a>
 </div>
 <div class="topnav">
   <div class="dropdown">

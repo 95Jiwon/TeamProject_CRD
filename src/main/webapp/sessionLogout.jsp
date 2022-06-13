@@ -26,7 +26,7 @@
 
 <script type="text/javascript">
 	alert('로그아웃 완료');
-	location.href = 'session_Login.jsp';
+	location.href = 'Main.jsp';
 </script>
 </body>
 </html>
