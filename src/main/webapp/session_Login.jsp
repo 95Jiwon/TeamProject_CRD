@@ -19,6 +19,11 @@
 
 %>
 <center>
+<div class="header">
+	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
+  	<img src="images/푸.png" width="150" align="center">
+	</a>
+</div>
 <h2>로그인</h2>
 <form action="sessionLoginPro.jsp" method="post">
 아이디:<input type="text" name="id"><br>

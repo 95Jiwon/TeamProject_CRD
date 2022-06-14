@@ -8,6 +8,11 @@
 </head>
 <body>
 <center>
+<div class="header">
+	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
+  	<img src="images/푸.png" width="150" align="center">
+	</a>
+</div>
 <h3>가입신청</h3>
 <h3>로그인 정보</h3>
 <form action="MemberJoinProc.jsp" method="post">
