@@ -124,19 +124,18 @@
       </div>
     </div>
 </div>
-   <div class="cate_search">
-				<ul>
-					
-					<li>
-						<select name="smethod" class="form-control">
-							<option value="" selected>포함단어</option>
-						</select>
-					</li>
-					<li><input type="text" name="requery_src" value="" class="form-control" placeholder="결과내재검색" onkeypress="if(event.keyCode==13) {searchResult(); return false}"/></li>
-					<li><a class="btn_search" href="#">검색</a></li>
-					<li><a class="btn_reset" href="#">검색초기화</a></li>
-				</ul>
-			</div>
+<div id = "cont-wrap" >
+			<div class="cate_top_txt" align="center"><h1>search</h1></div>
+        </div>
+		<div class="search_bar" align="center">
+                 <form  name="frm_search" role="search" method="get" class="search-form" >
+                     <input type="search" class="search-field" placeholder="상품명" value="${param.findStr }" name="findStr" />
+                    <input type="submit"  name="btnFind" class="search-submit" value = "검색"/>
+                    <input type="hidden" name="nowPage" value="${(empty param.nowPage)? 1: param.nowPage}" size="10">
+					<input type="hidden" name="serial" size="10" >
+					<input type="hidden" name="search" value="select">
+                 </form>
+        </div>
 
 <script type="text/javascript">
 <!--
@@ -146,7 +145,7 @@
 //-->
 </script>
 
-<table id="gcTable" class="tablesorter" >
+<table id="gcTable" class="tablesorter" style="margin-left: auto; margin-right: auto;" >
 	<thead>
 	<tr>
 		<th>물품명</th>
