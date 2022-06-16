@@ -232,7 +232,7 @@ body {
 					
 					<%}else{ %>	
 					<!-- 로그인 이후 화면 -->
-					<span><%=(id == null)? "손님" : id %> 방가...방가...</span>
+					<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
 					<a href="sessionLogout.jsp">
 						<input type='button' value='로그아웃' id='btnLogout'/>
 					</a>
