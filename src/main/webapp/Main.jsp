@@ -79,6 +79,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: auto;
 }
 .dropdown-content {
     display: none;

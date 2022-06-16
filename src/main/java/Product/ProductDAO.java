@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class ProductDAO {
@@ -13,8 +14,8 @@ public class ProductDAO {
 	
 	public void getcon() {
 		try {
-			String dbURL="jdbc:mariadb://58.229.253.250:3306/student214";
-			String dbID ="student214";
+			String dbURL="jdbc:mariadb://58.229.253.250:3306/student216";
+			String dbID ="student216";
 			String dbPassword ="1234!!";
 			Class.forName("org.mariadb.jdbc.Driver");
 			conn=DriverManager.getConnection(dbURL, dbID, dbPassword);
@@ -22,8 +23,6 @@ public class ProductDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	
 	
 	
 	
