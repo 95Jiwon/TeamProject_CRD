@@ -132,7 +132,7 @@ body {
 		</div>
 	</div>
 	<div class="dropdown">
-	<button class="dropbtn">기타</button>
+	<button class="dropbtn">악세사리</button>
 		<div class="dropdown-content">
 			<a href="#">Link 1</a>
 			<a href="#">Link 2</a>
@@ -148,15 +148,7 @@ body {
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">도서</button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
+      <button class="dropbtn">기타</button>
       <div class="dropdown-content">
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>
