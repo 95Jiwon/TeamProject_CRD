@@ -19,7 +19,11 @@
 	<jsp:useBean id="mbean" class="Member.MemberBean">
 		<jsp:setProperty property="*" name="mbean"/>
 	</jsp:useBean>
-	
+
+<%
+	MemberDAO mdao = new MemberDAO();
+	mdao.insertMember(mbean);
+%>	
 <%
 		if(mbean.getId() == null || mbean.getPass1() == null || mbean.getPass2() == null ||	mbean.getName() == null
 		|| mbean.getAddress() == null || mbean.getTel() == null || mbean.getPhone() == null || mbean.getEmail() == null){

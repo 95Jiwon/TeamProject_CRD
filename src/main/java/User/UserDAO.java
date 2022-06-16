@@ -12,8 +12,8 @@ public class UserDAO {
 	
 	public void getcon() {
 		try {
-			String dbURL="jdbc:mariadb://58.229.253.250:3306/student214";
-			String dbID ="student214";
+			String dbURL="jdbc:mariadb://58.229.253.250:3306/student216";
+			String dbID ="student216";
 			String dbPassword ="1234!!";
 			Class.forName("org.mariadb.jdbc.Driver");
 			conn=DriverManager.getConnection(dbURL, dbID, dbPassword);
@@ -22,14 +22,14 @@ public class UserDAO {
 		}
 	}
 	
-	public int loginOK(String id,String password) {
+	public int loginOK(String id,String pass1) {
 		int result =0;
 		getcon();
 		try {
 			String SQL = "SELECT * FROM MEMBER WHERE id=? AND pass1=?";
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, id);
-			pstmt.setString(2, password);
+			pstmt.setString(2, pass1);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result = 1;  // 로그인 성공
@@ -43,7 +43,7 @@ public class UserDAO {
 		return result;
 	}
 	
-	public int loginAuthOk(String id,String password) {
+	public int loginAuthOk(String id,String pass1) {
 		int result = 0;
 		getcon();
 		try {
@@ -54,9 +54,9 @@ public class UserDAO {
 			if(rs.next()) {
 				String passwd = rs.getString("pass1");  //암호화된 비밀번호 읽어오기
 				
-				String SQL1 = "SELECT password(?)";
+				String SQL1 = "SELECT pass1(?)";
 				pstmt=conn.prepareStatement(SQL1);
-				pstmt.setString(1,password );
+				pstmt.setString(1,pass1 );
 				rs =pstmt.executeQuery();
 				if(rs.next()) {
 					String passwdAuth = rs.getString(1);
@@ -76,14 +76,14 @@ public class UserDAO {
 		return result;
 	}
 	
-	public int loginAuth2Ok(String id,String password) {
+	public int loginAuth2Ok(String id,String pass1) {
 		int result=0;
 		getcon();
 		try {
-			String SQL ="SELECT * FROM MEMBER WHERE id=? AND pass1=password(?)";
+			String SQL ="SELECT * FROM MEMBER WHERE id=? AND pass1=?";
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, id);
-			pstmt.setString(2, password);
+			pstmt.setString(2, pass1);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result = 1;

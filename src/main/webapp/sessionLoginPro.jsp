@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ page import="User.UserDAO" %>
     <%@ page import="User.UserBean" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
-	String password = request.getParameter("password");
+	String pass1 = request.getParameter("pass1");
 	String loginChk = request.getParameter("loginChk");
 	
 	// id,password
@@ -20,7 +21,7 @@
 	String dbPassword = "test1";
 
 	UserDAO udao = new UserDAO();
-	if(udao.loginAuth2Ok(id, password) == 1){ // 로그인 성공
+	if(udao.loginAuth2Ok(id, pass1) == 1){ // 로그인 성공
 		session.setAttribute("id", id);
 		if(loginChk != null){
 			Cookie cookie = new Cookie("id",id);
@@ -32,7 +33,7 @@
 			response.sendRedirect("Main.jsp");
 		}
 	}else {
-		out.println("로그인 실패");
+	//	out.println("로그인 실패");
 	}
 	/*
 	if(udao.loginAuthOk(id, password) == 1){
