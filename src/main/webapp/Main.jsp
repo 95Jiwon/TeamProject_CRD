@@ -224,7 +224,7 @@ body {
 				
 				<%if(id == null) {%>	
 					<a href="session_Login.jsp">
-						<img class="fakeimg2" src="images/로그인.png" style="height:200px; text-align: center;">
+						<img class="fakeimg2" src="images/login.png" style="height:200px; text-align: center;">
 					</a>
 					<a href="MemberJoin.jsp">
 						<img class="fakeimg2" src="images/회원가입.png" style="height:50px; text-align: center;">
