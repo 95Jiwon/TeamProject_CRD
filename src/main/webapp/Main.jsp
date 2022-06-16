@@ -110,7 +110,7 @@ body {
 
 <div class="header">
 	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
-  	<img src="images/푸.png" width="150" align="center">
+  	<img src="images/푸.png" width="150" >
 	</a>
 </div>
  
