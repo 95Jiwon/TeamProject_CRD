@@ -47,7 +47,7 @@ body {
 }
 .card {
     background-color: white;
-    padding: 20px;
+    
     margin-top: 20px;
 }
 .row:after {
@@ -212,45 +212,39 @@ body {
 		}
 		</script>
 		<div class="card">
-			<div class="fakeimg" style="height:200px;">Image</div>
+			<div class="fakeimg" style="height:200px;">상품 전시</div>
 		</div>
 	</div>
 	<div class="rightcolumn">
 		<div class="card">
 			
 			<form name='frm_login' id='frm_login' method='post'>
-		<!-- 공통 -->
-		<input type='hidden' name='loginFlag' value='' />
+				<!-- 공통 -->
+				<input type='hidden' name='loginFlag' value='' />
+				
+				<%if(id == null) {%>	
+					<a href="session_Login.jsp">
+						<img class="fakeimg2" src="images/로그인.png" style="height:200px; text-align: center;">
+					</a>
+					<a href="MemberJoin.jsp">
+						<img class="fakeimg2" src="images/회원가입.png" style="height:50px; text-align: center;">
+					</a>
+					
+					<%}else{ %>	
+					<!-- 로그인 이후 화면 -->
+					<span><%=(id == null)? "손님" : id %> 방가...방가...</span>
+					<a href="sessionLogout.jsp">
+						<input type='button' value='로그아웃' id='btnLogout'/>
+					</a>
+				<%} %>
+			</form>
+		</div>
 		
-		<%if(id == null) {%>	
-			<a href="session_Login.jsp">
-				<img class="fakeimg2" src="images/로그인.png" style="height:200px; text-align: center;">
-			</a>
-			
-			<%}else{ %>	
-			<!-- 로그인 이후 화면 -->
-			<span><%=(id == null)? "손님" : id %> 방가...방가...</span>
-			<a href="sessionLogout.jsp">
-				<input type='button' value='로그아웃' id='btnLogout'/>
-			</a>
-		<%} %>
-	</form>
-		</div>
-		<div class="card">
-			<h3>Popular Post</h3>
-			<div class="fakeimg"><p>Image</p></div>
-			<div class="fakeimg"><p>Image</p></div>
-			<div class="fakeimg"><p>Image</p></div>
-		</div>
-	    <div class="card">
-			<h3>Follow Me</h3>
-			<p>Some text..</p>
-		</div>
 	</div>
 </div>
  
 <div class="footer">
-	<h2>Footer</h2>
+	<h2>상세설명</h2>
 </div>
  
 </body>
