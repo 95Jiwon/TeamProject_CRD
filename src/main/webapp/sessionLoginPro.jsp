@@ -33,7 +33,7 @@
 			response.sendRedirect("Main.jsp");
 		}
 	}else {
-	//	out.println("로그인 실패");
+		out.println("로그인 실패");
 	}
 	/*
 	if(udao.loginAuthOk(id, password) == 1){

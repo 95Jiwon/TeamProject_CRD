@@ -27,6 +27,9 @@ body {
 .topnav {
     background-color: black;
 }
+.topnav {   
+    background-color: black; 
+}
 .leftcolumn {   
     float: left;
     width: 75%;
@@ -79,6 +82,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: auto;
 }
 .dropdown-content {
     display: none;
