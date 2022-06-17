@@ -25,7 +25,7 @@ body {
     font-size: 50px;
 }
 .topnav {   
-    background-color: black;
+    background-color: black; 
 }
 .leftcolumn {   
     float: left;
