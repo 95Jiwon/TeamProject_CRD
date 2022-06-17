@@ -6,7 +6,7 @@
 <style type="text/css">
 <%
 request.setCharacterEncoding("utf-8"); //한글 깨짐 방지
-String id =(String) session.getAttribute("id");
+String id = (String) session.getAttribute("id");
 %> 
 * {
     box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
 .header h1 {
     font-size: 50px;
 }
-.topnav {   
+.topnav {
     background-color: black;
 }
 .leftcolumn {   
@@ -110,7 +110,7 @@ body {
 
 <div class="header">
 	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
-  	<img src="images/푸.png" width="150" >
+  	<img src="images/code.png" width="150" >
 	</a>
 </div>
  
