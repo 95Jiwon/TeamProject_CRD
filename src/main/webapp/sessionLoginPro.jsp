@@ -23,6 +23,7 @@
 	UserDAO udao = new UserDAO();
 	if(udao.loginAuth2Ok(id, pass1) == 1){ // 로그인 성공
 		session.setAttribute("id", id);
+		session.setAttribute("auth", 5);
 		if(loginChk != null){
 			Cookie cookie = new Cookie("id",id);
 			cookie.setMaxAge(24*60*60);
@@ -33,7 +34,15 @@
 			response.sendRedirect("Main.jsp");
 		}
 	}else {
+		//10일 경우
+		session.setAttribute("auth", 10);
+		if(id.equals("user123")&&pass1.equals("12345!")){
+			Cookie cookie = new Cookie("auth",id);
+			response.addCookie(cookie);
+			response.sendRedirect("adminMain.jsp");
+		}else{
 		out.println("로그인 실패");
+		}
 	}
 	/*
 	if(udao.loginAuthOk(id, password) == 1){

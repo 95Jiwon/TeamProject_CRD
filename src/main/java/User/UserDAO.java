@@ -78,6 +78,7 @@ public class UserDAO {
 	
 	public int loginAuth2Ok(String id,String pass1) {
 		int result=0;
+		int auth=0;
 		getcon();
 		try {
 			String SQL ="SELECT * FROM MEMBER WHERE id=? AND pass1=?";
@@ -87,6 +88,15 @@ public class UserDAO {
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result = 1;
+				auth = rs.getInt("auth");
+				//auth권한 검사
+				//1일경우 ==10
+				if(auth == 1) {
+					result = 10;
+				}else {
+					result = 1;
+				}
+				
 			}else {
 				result = 0;
 			}
