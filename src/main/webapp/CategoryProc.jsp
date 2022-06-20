@@ -79,6 +79,13 @@
 </style>
 </head>
 <body>
+<%
+	
+	String searchstr = request.getParameter("findStr");
+	
+%>
+
+
 <div class="header">
 	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
   	<img src="images/code.png" width="150" align="center">
@@ -130,7 +137,7 @@
 			<div class="cate_top_txt" align="center"><h1>search</h1></div>
         </div>
 		<div class="search_bar" align="center">
-                 <form  name="frm_search" role="search" method="get" class="search-form" action="CategoryProc.jsp" >
+                 <form  name="frm_search" role="search" method="get" class="search-form" >
                      <input type="search" class="search-field" placeholder="상품명" value="${param.findStr }" name="findStr" />
                     <input type="submit"  name="btnFind" class="search-submit" value = "검색"/>
                     <input type="hidden" name="nowPage" value="${(empty param.nowPage)? 1: param.nowPage}" size="10">
