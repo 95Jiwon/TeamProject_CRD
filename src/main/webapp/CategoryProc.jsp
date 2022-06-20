@@ -204,7 +204,7 @@
         <td><img width="100px" height="100px" src="images/golmu.jpg"></td>
     </tr>
 	</tbody>
-</table>
+</table>  
 
 </body>
 </html>
