@@ -1,4 +1,4 @@
-package item;
+package Item;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
 
-import item.ItemBean;
+import Item.ItemBean;
 
 public class ItemDAO {
 	

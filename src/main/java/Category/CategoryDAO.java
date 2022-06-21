@@ -33,24 +33,15 @@ public class CategoryDAO {
 		
 		Vector<CategoryBean> v = new Vector<>();
 		try {
-			String SQL = "SELECT * FROM item WHERE searchkey";
+			String SQL = "SELECT itemName,price,itemImage FROM item WHERE itemName LIKE ?";
 			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, searchkey);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				CategoryBean bean = new CategoryBean();
 				bean.setItemName(rs.getString(1));
 				bean.setSalePrice(rs.getString(2));
 				bean.setItemImage(rs.getString(3));
-				
-				
-//				bean.setId(rs.getString(1));
-//				bean.setPass1(rs.getString(2));
-//				bean.setPass2(rs.getString(3));
-//				bean.setName(rs.getString(4));
-//				bean.setAddress(rs.getString(5));
-//				bean.setTel(rs.getString(6));
-//				bean.setPhone(rs.getString(7));
-//				bean.setEmail(rs.getString(8));
 				
 				v.add(bean);
 			}
