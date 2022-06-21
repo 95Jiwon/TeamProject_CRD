@@ -39,7 +39,7 @@
 		if(id.equals("user123")&&pass1.equals("12345!")){
 			Cookie cookie = new Cookie("auth",id);
 			response.addCookie(cookie);
-			response.sendRedirect("adminMain.jsp");
+			response.sendRedirect("Main.jsp");
 		}else{
 		out.println("로그인 실패");
 		}
