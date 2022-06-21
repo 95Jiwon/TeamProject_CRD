@@ -228,10 +228,19 @@ body {
 					
 					<%}else{ %>	
 					<!-- 로그인 이후 화면 -->
-					<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+					<% if(id=="test123"){ %>
+						<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+						<a href="adminMain.jsp">
+							<input type='button' value='관리자설정'/>
+						</a>
+						<a href="sessionLogout.jsp">
+							<input type='button' value='로그아웃' id='btnLogout'/>
+						</a>
+					<% }else{ %><span ><%=(id == null)? "손님" : id %> 환영합니다</span>
 					<a href="sessionLogout.jsp">
 						<input type='button' value='로그아웃' id='btnLogout'/>
 					</a>
+					<% } %>
 				<%} %>
 			</form>
 		</div>
