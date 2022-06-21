@@ -28,8 +28,6 @@
 <form action="sessionLoginPro.jsp" method="post">
 아이디:<input type="text" name="id"><br>
 패스워드:<input type="password" name="pass1"><br>
-<input type="radio" name="login" value="관리자">관리자 로그인 &nbsp;
-<input type="radio" name="login" value="일반">일반 로그인 &nbsp;<br>
 <input type="checkbox" name="loginChk" value="true">로그인 상태유지<br>
 <input type="submit" value="로그인">
 <input type="button" value="회원가입" onclick="location.href='MemberJoin.jsp';">

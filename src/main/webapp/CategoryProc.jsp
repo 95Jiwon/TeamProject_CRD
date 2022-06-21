@@ -1,5 +1,8 @@
+<%@page import="java.util.Vector"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="Category.CategoryBean" %>
+<%@ page import="Category.CategoryDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +82,18 @@
 </style>
 </head>
 <body>
+<%
+	
+	String searchstr = request.getParameter("findStr");
+	
+%>
+<%
+CategoryDAO cdao = new CategoryDAO();
+
+Vector<CategoryBean> vec= cdao.findSearch(searchstr);
+
+%>
+
 <div class="header">
 	<a href="http://localhost:8081/TeamProject_CRD/Main.jsp" target="_self">
   	<img src="images/code.png" width="150" align="center">
@@ -130,7 +145,7 @@
 			<div class="cate_top_txt" align="center"><h1>search</h1></div>
         </div>
 		<div class="search_bar" align="center">
-                 <form  name="frm_search" role="search" method="get" class="search-form" action="CategoryProc.jsp" >
+                 <form  name="frm_search" role="search" method="get" class="search-form" >
                      <input type="search" class="search-field" placeholder="상품명" value="${param.findStr }" name="findStr" />
                     <input type="submit"  name="btnFind" class="search-submit" value = "검색"/>
                     <input type="hidden" name="nowPage" value="${(empty param.nowPage)? 1: param.nowPage}" size="10">
@@ -156,48 +171,19 @@
 	</tr>
 	</thead>
 	<tbody>
+<% for(int i=0;i<vec.size();i++){
+		CategoryBean bean = vec.get(i);		
+%>	
+
     <tr>
-        <td>연필깍이</td>
-        <td>10000</td>
-        <td><img width="100px" height="100px" src="images/pensil.jpg"></td>
+        <td><%= bean.getItemName() %></td>
+        <td><%= bean.getSalePrice() %></td>
+        <td><img width="100px" height="100px" src="images/<%= bean.getItemImage() %>"></td>
     </tr>
-    <tr>
-        <td>A4복사용지2500매</td>
-        <td>15000</td>
-        <td><img width="100px" height="100px" src="images/A4.jpg"></td>
-    </tr>
-    <tr>
-        <td>포스트잇</td>
-        <td>1700</td>
-        <td><img width="100px" height="100px" src="images/postit.jpg"></td>
-    </tr>
-    <tr>
-        <td>수정테이프</td>
-        <td>1880</td>
-        <td><img width="100px" height="100px" src="images/tape.jpg"></td>
-    </tr>
-    <tr>
-        <td>스테플러</td>
-        <td>4500</td>
-        <td><img width="100px" height="100px" src="images/stemp.jpg"></td>
-    </tr>
-    <tr>
-        <td>커터</td>
-        <td>1800</td>
-        <td><img width="100px" height="100px" src="images/cutter.jpg"></td>
-    </tr>
-    <tr>
-        <td>2공펀치</td>
-        <td>9500</td>
-        <td><img width="100px" height="100px" src="images/punchi.jpg"></td>
-    </tr>
-    <tr>
-        <td>골무</td>
-        <td>2300</td>
-        <td><img width="100px" height="100px" src="images/golmu.jpg"></td>
-    </tr>
+<%	
+	} %>    
 	</tbody>
-</table>
+</table>  
 
 </body>
 </html>

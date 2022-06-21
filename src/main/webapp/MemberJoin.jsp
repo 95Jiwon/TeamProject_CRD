@@ -57,7 +57,7 @@ function idCheck(id){
 	<tr height="50">
 		<td width="200" align="center"> 비밀번호</td>
 		<td width="350" align="left">
-		<input type="password" name="pass1" id="pass1" size="30" onchange="check_pw()"></td>
+		<input type="password" name="pass1" id="pass1" size="30" placeholder="6~16 자리 특수문자 포함"onchange="check_pw()"></td>
 	</tr>
   	<tr height="50">
 		<td width="200" align="center"> 비밀번호 확인</td>

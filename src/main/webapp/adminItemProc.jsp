@@ -1,10 +1,10 @@
 <%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="item.ItemDAO" %>    
-<%@ page import="item.ItemBean"%>
+<%@ page import="Item.ItemDAO" %>    
+<%@ page import="Item.ItemBean"%>
 <% request.setCharacterEncoding("utf-8");%>
-<jsp:useBean id="item" class="item.ItemBean" scope="page" />
+<jsp:useBean id="item" class="Item.ItemBean" scope="page" />
 <jsp:setProperty name="item" property="itemName" />
 <jsp:setProperty name="item" property="price" />
 <jsp:setProperty name="item" property="sellPrice" />
@@ -29,7 +29,7 @@
 	String itemImage = request.getParameter("itemImage");
 %>
 	
-	<jsp:useBean id="ibean" class="item.ItemBean">
+	<jsp:useBean id="ibean" class="Item.ItemBean">
 		<jsp:setProperty property="*" name="ibean"/>
 	</jsp:useBean>
 <%

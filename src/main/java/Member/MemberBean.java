@@ -10,6 +10,7 @@ public class MemberBean {
 	private String tel;
 	private String phone;
 	private String email;
+	private int auth;
 
 //	private char Deleteinfo;
 //	public char getDeleteinfo() {
@@ -67,4 +68,11 @@ public class MemberBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public int getAuth() {
+		return auth;
+	}
+	public void setAuth(int auth) {
+		this.auth = auth;
+	}
+	
 }
