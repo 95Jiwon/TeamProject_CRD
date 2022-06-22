@@ -226,21 +226,21 @@ body {
 						<img class="fakeimg2" src="images/회원가입.png" style="height:50px; text-align: center;">
 					</a>
 					
-					<%}else{ %>	
-					<!-- 로그인 이후 화면 -->
-					<% if(id=="test123"){ %>
-						<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
-						<a href="adminMain.jsp">
-							<input type='button' value='관리자설정'/>
-						</a>
-						<a href="sessionLogout.jsp">
-							<input type='button' value='로그아웃' id='btnLogout'/>
-						</a>
-					<% }else{ %><span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+				<%}else if(id == "user123") {%>
+					<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+					<a href="adminMain.jsp">
+						<input type='button' value='관리자' id='btnLogout'/>
+					</a>
 					<a href="sessionLogout.jsp">
 						<input type='button' value='로그아웃' id='btnLogout'/>
 					</a>
-					<% } %>
+				<%}else{ %>	
+					<!-- 로그인 이후 화면 -->
+					<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+					
+					<a href="sessionLogout.jsp">
+						<input type='button' value='로그아웃' id='btnLogout'/>
+					</a>
 				<%} %>
 			</form>
 		</div>
