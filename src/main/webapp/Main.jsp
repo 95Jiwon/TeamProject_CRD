@@ -224,7 +224,9 @@ body {
 					</a>
 					<a href="MemberJoin.jsp">
 						<img class="fakeimg2" src="images/회원가입.png" style="height:50px; text-align: center;">
-					</a>		
+					</a>
+					
+					<%}else{ %>	
 					<!-- 로그인 이후 화면 -->
 					<% if(id.equals("user123")){ %>
 						<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
@@ -234,11 +236,11 @@ body {
 						<a href="sessionLogout.jsp">
 							<input type='button' value='로그아웃' id='btnLogout'/>
 						</a>
-				<% }else{ %><span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+					<% }else{ %><span ><%=(id == null)? "손님" : id %> 환영합니다</span>
 					<a href="sessionLogout.jsp">
 						<input type='button' value='로그아웃' id='btnLogout'/>
 					</a>
-					<%} %>
+					<% } %>
 				<%} %>
 			</form>
 		</div>
