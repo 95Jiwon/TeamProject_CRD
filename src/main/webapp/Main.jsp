@@ -228,7 +228,7 @@ body {
 					
 					<%}else{ %>	
 					<!-- 로그인 이후 화면 -->
-					<% if(id=="user123"){ %>
+					<% if(id.equals("user123")){ %>
 						<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
 						<a href="adminMain.jsp">
 							<input type='button' value='관리자설정'/>
