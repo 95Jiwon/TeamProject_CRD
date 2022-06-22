@@ -35,9 +35,11 @@
 		}
 	}else {
 		//10일 경우
+		session.setAttribute("id", id);
 		session.setAttribute("auth", 10);
 		if(id.equals("user123")&&pass1.equals("12345!")){
 			Cookie cookie = new Cookie("auth",id);
+			cookie.setPath("/");
 			response.addCookie(cookie);
 			response.sendRedirect("Main.jsp");
 		}else{
