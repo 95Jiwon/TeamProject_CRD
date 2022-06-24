@@ -227,7 +227,6 @@ body {
 					</a>
 					
 
-
 					<%}else{ %>	
 					<!-- 로그인 이후 화면 -->
 					<% if(id.equals("user123")){ %>
@@ -243,7 +242,7 @@ body {
 					<a href="sessionLogout.jsp">
 						<input type='button' value='로그아웃' id='btnLogout'/>
 					</a>
-					<%} %>
+					<% } %>
 				<%} %>
 			</form>
 		</div>
