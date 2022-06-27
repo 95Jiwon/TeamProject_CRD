@@ -14,7 +14,14 @@ public class ItemBean {
 	private int re_level;
 	private int readcount;
 	private String content;
+	private int itemAvailable;
 	
+	public int getItemAvailable() {
+		return itemAvailable;
+	}
+	public void setItemAvailable(int itemAvailable) {
+		this.itemAvailable = itemAvailable;
+	}
 	public String getReg_date() {
 		return reg_date;
 	}

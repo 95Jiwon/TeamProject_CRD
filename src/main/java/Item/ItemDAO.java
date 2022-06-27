@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import Item.ItemBean;
@@ -31,7 +32,6 @@ public class ItemDAO {
 		int result =0;
 		getcon();
 		try {
-			
 			//기존에 item이 있는지 검사 하는 코드
 			// SQL = String SQL = "SELECT itemName FROM item WHERE itemNAME"
 			// if(getItemName.equlas(SQL){
@@ -110,7 +110,7 @@ public class ItemDAO {
 		getcon();
 		int count = 0;
 		try {
-			String SQL = "select count(*) from board";
+			String SQL = "select count(*) from item";
 			
 			pstmt = conn.prepareStatement(SQL);
 			rs = pstmt.executeQuery();
@@ -124,14 +124,15 @@ public class ItemDAO {
 		return count;
 	}
 	
+	//
 	public Vector<ItemBean> getTotalAllBoard(){
 		Vector<ItemBean> v = new Vector<>();
 		getcon();
 		try {
 			String SQL ="select * from (select A.*,(@rownum := @rownum +1) as Rnum  FROM "
-					+ " (SELECT * from board ) AS A, "
-					+ " (SELECT @rownum:=0) tmp ) B  "
-					+ " ORDER BY num ASC";
+					+ " (SELECT * from item ) AS A, "
+					+ " (SELECT @rownum:=0) temp1 ) B  "
+					+ " ORDER BY itemNum desc";
 			pstmt = conn.prepareStatement(SQL);			
 			rs = pstmt.executeQuery();
 			
@@ -150,6 +151,7 @@ public class ItemDAO {
 				bean.setRe_level(rs.getInt(11));
 				bean.setReadcount(rs.getInt(12));
 				bean.setContent(rs.getString(13));
+				bean.setItemAvailable(rs.getInt(14));
 				
 				v.add(bean);
 			}
@@ -161,4 +163,62 @@ public class ItemDAO {
 		}
 		return v;
 	}
+	
+	//게시글 번호 부여 메소드
+			public int getNext() {
+				getcon();
+				//현재 게시글을 내림차순으로 조회하여 가장 마지막 글의 번호를 구한다
+				String sql = "select bbsID from bbs order by bbsID desc";
+				try {
+					PreparedStatement pstmt = conn.prepareStatement(sql);
+					rs = pstmt.executeQuery();
+					if(rs.next()) {
+						return rs.getInt(1) + 1;
+					}
+					return 1; //첫 번째 게시물인 경우
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+				return -1; //데이터베이스 오류
+			}
+	
+	//게시글 리스트 메소드
+			public ArrayList<ItemBean> getList(int pageNumber){
+				getcon();
+				String sql = "select * from item where itemName < ? and itemAvailable = 1 order by itemName desc limit 10";
+				ArrayList<ItemBean> list = new ArrayList<ItemBean>();
+				try {
+					PreparedStatement pstmt = conn.prepareStatement(sql);
+					pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
+					rs = pstmt.executeQuery();
+					while(rs.next()) {
+						ItemBean ibean = new ItemBean();
+						ibean.setItemNum(rs.getInt(1));
+						ibean.setItemName(rs.getString(2));
+						ibean.setItemImage(rs.getString(3));
+						ibean.setSellPrice(rs.getInt(4));
+						ibean.setItemComment(rs.getString(5));
+						list.add(ibean);
+					}
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+				return list;
+			}
+			
+			//페이징 처리 메소드
+			public boolean nextPage(int pageNumber) {
+				String sql = "select * from itemBean where itemNum < ? and itemAvailable = 1";
+				try {
+					PreparedStatement pstmt = conn.prepareStatement(sql);
+					pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
+					rs = pstmt.executeQuery();
+					if(rs.next()) {
+						return true;
+					}
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+				return false;
+			}
 }
