@@ -36,6 +36,7 @@ body {
 }
 .rightcolumn {
     float: left;
+    text-align: center;
     width: 25%;
     background-color: #f1f1f1;
     padding-left: 20px;
@@ -211,7 +212,7 @@ body {
 			<div class="fakeimg" style="height:200px;">상품 전시</div>
 		</div>
 	</div>
-	<div class="rightcolumn">
+	<div class="rightcolumn" >
 		<div class="card">
 			
 			<form name='frm_login' id='frm_login' method='post'>
@@ -231,17 +232,24 @@ body {
 					<!-- 로그인 이후 화면 -->
 					<% if(id.equals("user123")){ %>
 						<span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+						<br>
+						<br>
+						<br>
+						<br>
 						<a href="adminMain.jsp">
-							<input type='button' value='관리자설정'/>
+							<img  src="images/admin.png" style="height:45px; width: 100px;">
 						</a>
+						<a href="sessionLogout.jsp">
+							<img  src="images/logout.png" style="height:45px;  width: 100px;">
+						</a>
+					<% }else{ %><span ><%=(id == null)? "손님" : id %> 환영합니다</span>
+						<br>
+						<br>
+						<br>
+						<br>
 						<a href="sessionLogout.jsp">
 							<input type='button' value='로그아웃' id='btnLogout'/>
 						</a>
-					<% }else{ %><span ><%=(id == null)? "손님" : id %> 환영합니다</span>
-
-					<a href="sessionLogout.jsp">
-						<input type='button' value='로그아웃' id='btnLogout'/>
-					</a>
 					<% } %>
 				<%} %>
 			</form>
