@@ -248,7 +248,7 @@ body {
 						<br>
 						<br>
 						<a href="sessionLogout.jsp">
-							<input type='button' value='로그아웃' id='btnLogout'/>
+							<img  src="images/logout.png" style="height:60px;  width: 150px;">
 						</a>
 					<% } %>
 				<%} %>
